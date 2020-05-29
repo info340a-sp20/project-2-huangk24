@@ -1,1 +1,220 @@
+html {
+  box-sizing: border-box;
+  background-color: #e4e4e4;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+body {
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+  color: #535353;
+  margin: 30px;
+}
+
+h1, h2 {
+  color: #d33434;
+  font-weight: 900;
+  font-size: 2.5rem;
+}
+
+#Problem_Description, #App_Description {
+  margin-top: 1em;
+  font-family: 'Racing Sans One', cursive;
+}
+
+header h1 {
+  font-family: 'Audiowide', cursive;
+  font-size: 65px;
+}
+
+header{
+  background-image: url('./porsche.jpeg');
+  background-size: cover; 
+}
+
+h1, .lead {
+  margin-top: 1em;
+  text-align: center;
+}
+
+nav {
+  width: 100%;
+  padding: .5rem;
+  position: fixed;
+  background-color: #d33434;
+  top: 0;
+  left: 0;
+  z-index: 3;
+}
+
+.nav-link {
+  display: block;
+  padding: .5rem 1rem;
+}
+
+a {
+  text-decoration: none;
+  color: #d33434;
+}
+
+nav li {
+  font-family: 'Kelly Slab', cursive;
+  font-size: 25px;
+  color: white;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  padding-top: .1rem;
+  padding-bottom: .1rem;
+  display: inline-block;
+}
+
+li {
+  display: inline;
+  margin-right: 1rem;
+}
+
+nav a:hover, nav a:focus, nav a:active {
+  color: #101010;
+  padding-bottom: 1.2rem;
+  border-bottom: .6rem solid #101010;
+}
+
+img:not(#logo)  {
+  object-fit: cover;
+  width: 18rem;
+  height: 18rem;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.card img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+nav ul img {
+  width: 60px;
+  height: 60px;
+}
+
+.card-title {
+  font-family: 'Orbitron', sans-serif;
+  font-size: 18px;
+  text-align: center;
+}
+
+p {
+  padding: 0.1rem;
+}
+
+header p {
+  font-family: 'Racing Sans One', cursive;
+  font-size: 26px;
+}
+
+nav ul, footer {
+  display: none;
+}
+
+.collapsible {
+  background-color:lightgrey;
+  color: black;
+  cursor: pointer;
+  padding: 8px;
+  width: 19rem;
+  border: none;
+  text-align: center;
+  outline: none;
+  font-size: 17px;
+  border-radius: 5px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.active, .collapsible:hover {
+  background-color: #555;
+}
+
+.card-text{
+  width: 19rem;
+  padding: 0 18px;
+  display: none;
+  overflow: hidden;
+  background-color: #f1f1f1;
+  font-size: 1rem !important;
+}
+
+#add-time {
+  padding-top: 2rem;
+}
+
+.change-views {
+  padding-left: 1rem;
+  padding-right: .5rem;
+  padding-bottom: 1rem;
+}
+
+@media (max-width: 598px) {
+
+  .card-text li{
+      display: block;
+      text-align: center;
+  }
+
+  .card-title {
+      font-size: 20px;
+  }
+}
+
+@media (min-width: 598px) {
+
+  #hamburger-menu {
+      display: none;
+  }
+
+  nav ul {
+      display: block;
+  }
+}
+
+@media (min-width: 768px) {
+
+  footer {
+      display: block;
+      font-size: 12px;
+      bottom: 0;
+  }
+}
+
+.card .form {
+  margin: 0 auto; /* Added */
+  float: none; /* Added */
+  margin-bottom: 10px; /* Added */
+}
+
+/* .submission {
+  animation: mymove 0.5s infinite;
+} */
+
+/* @keyframes mymove {
+  from {
+      background-color: #535353;
+  }
+
+  to {
+      background-color: green;
+  }
+} */
+
+/* #about {
+  margin: 20px;
+} */
 
