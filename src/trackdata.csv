@@ -1,0 +1,7 @@
+﻿name,difficulty,length,location,propername,image,wiki
+nurburgring,10,16,germany,Nurburgring,img/big-nurb.jpg,https://en.wikipedia.org/wiki/N%C3%BCrburgring
+laguna,7,2.2,us,Weathertech Laguna Seca,img/big-laguna.jpg,https://en.wikipedia.org/wiki/WeatherTech_Raceway_Laguna_Seca
+cota,6,3.4,us,Circuit of the Americas,img/big-cota.jpg,https://en.wikipedia.org/wiki/Circuit_of_the_Americas
+panorama,8,3.9,australia,Mount Panorama Circuit,img/big-mtp.jpg,https://en.wikipedia.org/wiki/Mount_Panorama_Circuit
+tskuba,5,1.3,japan,Tsukuba Circuit,img/big-tsu.jpg,https://en.wikipedia.org/wiki/Tsukuba_Circuit
+atlanta,6.5,2.5,us,Road Atlanta,img/big-rdatl.jpeg,https://en.wikipedia.org/wiki/Road_Atlanta
