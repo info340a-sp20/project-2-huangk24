@@ -43,6 +43,7 @@ header{
 h1, .lead {
   margin-top: 1em;
   text-align: center;
+  text-shadow: 1px 0 0 #000, 0 -1px 0 #000, 0 1px 0 #000, -1px 0 0 #000;
 }
 
 nav {
@@ -84,10 +85,14 @@ li {
   margin-right: 1rem;
 }
 
+nav a {
+  color: #f1f1f1;
+}
+
 nav a:hover, nav a:focus, nav a:active {
   color: #101010;
-  padding-bottom: 1.2rem;
-  border-bottom: .6rem solid #101010;
+  /* padding-bottom: 1.2rem; */
+  /* border-bottom: .6rem solid #101010; */
 }
 
 img:not(#logo)  {
@@ -230,6 +235,7 @@ nav, .footer {
 .jumbotron {
   height: 22.5rem;
 }
+
 
 /* .container {
   padding-top: 4rem;

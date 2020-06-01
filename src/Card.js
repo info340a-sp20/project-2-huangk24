@@ -1,16 +1,15 @@
 import React, { Component } from 'react';
-import ReactDOM from 'react-dom';
 import { Card, CardText, CardBody, CardImg,
     CardTitle, Button } from 'reactstrap';
 import 'bootstrap/dist/css/bootstrap.css';
 
 export class RenderCard extends Component {
-    constructor(props){
-      super(props);
-      this.state = {cards: this.props.initialCards};
-    }
-    render() {
+    // constructor(props){
+    //   super(props);
+    //   this.state = {cards: this.props.initialCards};
+    // }
 
+    render() {
         return (
             <div className="col-md-6 col-xl-4 d-flex">
               <div className="card mb-4"><Card>
