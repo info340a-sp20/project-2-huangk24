@@ -4,30 +4,12 @@ import { Card, CardText, CardBody, CardImg,
     CardTitle, Button } from 'reactstrap';
 import * as d3 from 'd3';
 import {BrowserRouter as HashRouter, Route, Switch, Link, Redirect} from 'react-router-dom';
-import { loadavg } from 'os';
 
 export class PeoplePage extends Component {
 
     render() {
-        // async function loadavg() {
-        //     return await d3.csv("data/drivers.csv");
-        // }
-
-        const drivers = await d3.csv("data/drivers.csv");
-        // d3.csv("data/drivers.csv", function(data) {
-        //     drivers.push(data);
-        //     // console.log(data);
-        //     // console.log(drivers);
-        // });
-
-        // console.log(drivers);
-
-        // d3.csv("data/drivers.csv").then(function(data) {
-        //     console.log(data);
-        //     drivers.push(data);
-        // });
-
-        console.log(drivers.length);
+        // let drivers = d3.csv("data/drivers.csv");
+        // console.log(drivers.length);
 
 
         // let jsxdrivers = drivers.map((person) => {
@@ -39,14 +21,9 @@ export class PeoplePage extends Component {
         return(
             <div className="container">
                 {/* {jsxdrivers} */}
+                <Person></Person>
             </div>
         );
-
-        // return(
-        //     <div className="container">
-        //         <Person></Person>
-        //     </div>
-        // );
     }
 }
 
@@ -60,13 +37,15 @@ class Person extends Component {
                   <div className="col-sm-auto w-100">
                     <CardImg className="pb-3" src="./img/big-cota.jpg" alt="Circuit of the Americas" />
                       <div className="col-sm">
-                        <CardTitle className="card-title">Circuit of the Americas</CardTitle>
+                        <CardTitle className="card-title">Some card idk</CardTitle>
                           <button type="button" className="collapsible">Lap times</button>
                           <div className="card-text" id="expand-list">
-                            <CardText>
+                            {/* <CardText> */}
+                            <div className="card-text" id="expand-list">
                               <ul className="hide-list row text-center" id="cota">
                               </ul>
-                            </CardText>
+                            {/* </CardText> */}
+                            </div>
                             <a className="btn btn-dark float-right mt-3" href="https://en.wikipedia.org/wiki/Circuit_of_the_Americas" aria-label="Learn more about the track">Learn more</a>
                           </div>
                       </div>
