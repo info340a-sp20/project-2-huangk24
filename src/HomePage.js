@@ -37,7 +37,9 @@ class FilterOption extends Component {
 export class HomePage extends Component {
   constructor(props) {
     super(props);
-    // this.onChange = this.onChange.bind(this);
+    this.changesort = this.changesort.bind(this);
+    this.changefilter = this.changefilter.bind(this);
+    this.getCards = this.getCards.bind(this);
     this.state = {
       sort: "length",
       filter: "all",
@@ -60,22 +62,26 @@ export class HomePage extends Component {
 
   changesort = (sortorder) => {
     this.setState({sort: sortorder});
-    // console.log(sortorder);
+    console.log(sortorder);
   }
 
   changefilter = (newfilter) => {
-    this.setState({filter: newfilter});
-    // console.log(newfilter);
-
+    // this.setState({filter: newfilter});
+    this.setState(() => {
+      //return the Object to "merge" into the state
+      let stateChanges = {filter: newfilter}; //increment count
+      return stateChanges;
+    });
   }
 
-  render() {
+  getCards = () => {
     let cards = [];
-
     let filteredtracks;
     if (this.state.filter != "all") {
       console.log("filter not all");
       filteredtracks = this.state.trackdetails.filter(function(track) {
+        console.log(track.location);
+        console.log(this.state.filter);
         return track.location == this.state.filter;
       });
     } else {
@@ -98,12 +104,15 @@ export class HomePage extends Component {
           timesarray.push(this.state.laptimes[j]);
         }
       }
-      // console.log(filteredtracks[i]);
       cards.push(<RenderCard key={filteredtracks[i].name} track={filteredtracks[i]} times={timesarray}></RenderCard>);
     }
+    return cards;
+  }
 
-    console.log("cards");
-    console.log(cards);
+  render() {
+    let cards = this.getCards();
+    // console.log("cards");
+    // console.log(cards);
 
     return (
       <>
