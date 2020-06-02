@@ -3,18 +3,13 @@ import 'bootstrap/dist/css/bootstrap.css';
 import {RenderCard} from "./Card";
 import * as d3 from 'd3';
 
-// let state = {
-//   sort: "length",
-//   filter: "all"
-// }
-
 class SortOption extends Component {
     render() {
       return (
         <>
           <label className="change-views" htmlFor="sort">Sort tracks by: </label>
-          <select id="sort">
-              <option value="length">Track Length</option>
+          <select id="sort" onChange={(event) => this.props.changefunc(event.target.value)}>
+            <option value="length">Track Length</option>
             <option value="difficulty">Difficulty</option>
           </select>
         </>
@@ -27,7 +22,7 @@ class FilterOption extends Component {
     return (
       <>
         <label className="change-views" htmlFor="filter">Filter tracks from: </label>
-          <select id="filter">
+          <select id="filter" onChange={(event) => this.props.changefunc(event.target.value)}>
             <option value="all">All (Default)</option>
             <option value="us">United States</option>
             <option value="japan">Japan</option>
@@ -42,7 +37,7 @@ class FilterOption extends Component {
 export class HomePage extends Component {
   constructor(props) {
     super(props);
-
+    // this.onChange = this.onChange.bind(this);
     this.state = {
       sort: "length",
       filter: "all",
@@ -53,23 +48,25 @@ export class HomePage extends Component {
 
   componentDidMount() {
     let currentComponent = this;
-    // let laptimes = [];
-    // let trackdetails = [];
     d3.csv("data/laptimes.csv")
       .then(function(data) {
-        // laptimes.push(data);
-        // console.log("mountedlap");
-        // console.log(data);
         currentComponent.setState({laptimes: data});
     });
-
     d3.csv("data/trackdata.csv")
       .then(function(data2) {
-        // trackdetails.push(data2);
-        // console.log("mountedtrack");
-        // console.log(data2);
         currentComponent.setState({trackdetails: data2});
     });
+  }
+
+  changesort = (sortorder) => {
+    this.setState({sort: sortorder});
+    // console.log(sortorder);
+  }
+
+  changefilter = (newfilter) => {
+    this.setState({filter: newfilter});
+    // console.log(newfilter);
+
   }
 
   render() {
@@ -79,7 +76,7 @@ export class HomePage extends Component {
     if (this.state.filter != "all") {
       console.log("filter not all");
       filteredtracks = this.state.trackdetails.filter(function(track) {
-        return track.location === this.state.filter;
+        return track.location == this.state.filter;
       });
     } else {
       // console.log("filter all");
@@ -110,8 +107,8 @@ export class HomePage extends Component {
 
     return (
       <>
-        <SortOption />
-        <FilterOption />
+        <SortOption changefunc={this.changesort}/>
+        <FilterOption changefunc={this.changefilter}/>
         <div className="container">
           <div className="row" id="content">
             {cards}
