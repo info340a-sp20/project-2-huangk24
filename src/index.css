@@ -4,239 +4,260 @@
 @import url('https://fonts.googleapis.com/css2?family=Audiowide&family=Kelly+Slab&family=Orbitron:wght@400;500&family=Racing+Sans+One&display=swap');
 
 html {
-  box-sizing: border-box;
-  background-color: #e4e4e4;
+    box-sizing: border-box;
+    background-color: #e4e4e4;
 }
 
 *, *:before, *:after {
-  box-sizing: inherit;
+    box-sizing: inherit;
 }
 
-.body {
-  box-sizing: border-box;
-  font-family: Arial, Helvetica, sans-serif;
-  color: #535353;
-  margin: 30px;
+body {
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #535353;
+    margin: 30px;
 }
 
-h1, h2, .card-title{
-  color: #d33434;
-  font-weight: 900;
-  font-size: 2.5rem;
+h1, h2 {
+    color: #d33434;
+    font-weight: 900;
+    font-size: 2.5rem;
 }
 
 #Problem_Description, #App_Description {
-  margin-top: 1em;
-  font-family: 'Racing Sans One', cursive;
+    margin-top: 1em;
+    font-family: 'Racing Sans One', cursive;
 }
 
 header h1 {
-  font-family: 'Audiowide', cursive;
-  font-size: 65px;
+    font-family: 'Audiowide', cursive;
+    font-size: 65px;
 }
 
 header{
-  background-image: url('./porsche.jpeg');
-  background-size: cover; 
+    background-image: url('./porsche.jpeg');
+    background-size: cover; 
 }
 
 h1, .lead {
-  margin-top: 1em;
-  text-align: center;
-  text-shadow: 1px 0 0 #000, 0 -1px 0 #000, 0 1px 0 #000, -1px 0 0 #000;
+    margin-top: 1em;
+    text-align: center;
+    text-shadow: 1px 0 0 #000, 0 -1px 0 #000, 0 1px 0 #000, -1px 0 0 #000;
 }
 
 nav {
-  width: 100%;
-  padding: .2rem;
-  position: fixed;
-  background-color: #d33434;
-  top: 0;
-  left: 0;
-  z-index: 3;
+    width: 100%;
+    padding: .2rem;
+    position: fixed;
+    background-color: #d33434;
+    top: 0;
+    left: 0;
+    z-index: 3;
 }
 
 .nav-link {
-  display: none;
-  padding: .5rem 1rem;
+    display: none;
+    padding: .5rem 1rem;
 }
 
 a {
-  text-decoration: none;
-  color: #d33434;
+    text-decoration: none;
+    color: #d33434;
 }
 
 nav li {
-  font-family: 'Kelly Slab', cursive;
-  font-size: 25px;
-  color: white;
+    font-family: 'Kelly Slab', cursive;
+    font-size: 25px;
+    color: white;
 }
 
 ul {
-  margin: 0;
-  padding: 0;
-  padding-top: .1rem;
-  padding-bottom: .1rem;
-  display: inline-block;
+    margin: 0;
+    padding: 0;
+    padding-top: .1rem;
+    padding-bottom: .1rem;
+    display: inline-block;
 }
 
 li {
-  display: inline;
-  margin-right: 1rem;
+    display: inline;
+    margin-right: 1rem;
 }
 
 nav a {
-  color: #f1f1f1;
+    color: #f1f1f1;
 }
 
 nav a:hover, nav a:focus, nav a:active {
-  color: #101010;
-  /* padding-bottom: 1.2rem; */
-  /* border-bottom: .6rem solid #101010; */
+    color: #101010;
+    /* padding-bottom: 1.2rem; */
+    /* border-bottom: .6rem solid #101010; */
 }
 
-img:not(#logo)  {
-  object-fit: cover;
-  width: 18rem;
-  height: 18rem;
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
+img:not(#logo)    {
+    object-fit: cover;
+    width: 18rem;
+    height: 18rem;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .card img {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 nav ul img {
-  width: 60px;
-  height: 60px;
+    width: 60px;
+    height: 60px;
 }
 
 .card-title {
-  font-family: 'Orbitron', sans-serif;
-  font-size: 18px;
-  text-align: center;
+    font-family: 'Orbitron', sans-serif;
+    font-size: 18px;
+    text-align: center;
 }
 
 p {
-  padding: 0.1rem;
+    padding: 0.1rem;
 }
 
-p.lead {
-  font-family: 'Racing Sans One', cursive;
-  font-size: 26px;
+.lead {
+    font-family: 'Racing Sans One', cursive;
+    font-size: 26px;
 }
 
-nav, .footer {
-  display: none;
+nav ul, footer {
+    display: none;
 }
 
 .collapsible {
-  background-color:lightgrey;
-  color: black;
-  cursor: pointer;
-  padding: 8px;
-  width: 15rem;
-  border: none;
-  text-align: center;
-  outline: none;
-  font-size: 17px;
-  border-radius: 5px;
-  margin-left: auto;
-  margin-right: auto;
+    background-color:lightgrey;
+    color: black;
+    cursor: pointer;
+    padding: 8px;
+    width: 100%;
+    border: none;
+    text-align: center;
+    outline: none;
+    font-size: 17px;
+    border-radius: 5px;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
 }
 
 .active, .collapsible:hover {
-  background-color: #555;
+    background-color: #555;
 }
 
 .card-text{
-  width: 19rem;
-  padding: 0 18px;
-  display: none;
-  overflow: hidden;
-  background-color: #f1f1f1;
-  font-size: 1rem !important;
+    width: 19rem;
+    padding: 0 18px;
+    display: none;
+    overflow: hidden;
+    background-color: #f1f1f1;
+    font-size: 1rem !important;
 }
 
 #add-time {
-  padding-top: 2rem;
+    padding-top: 2rem;
 }
 
 .change-views {
-  padding-left: 1rem;
-  padding-right: .5rem;
-  padding-bottom: 1rem;
+    padding-left: 1rem;
+    padding-right: .5rem;
+    padding-bottom: 1rem;
 }
 
 @media (max-width: 598px) {
 
-  .card-text li{
+    .card-text li{
       display: block;
       text-align: center;
-  }
+    }
 
-  .card-title {
-      font-size: 20px;
-  }
+    .card-title {
+      font-size: 20px;  
+    }
 
-  ul.nav {
-    display: none;
-  }
-  
+    ul.nav {
+      display: none;
+    }
+    
 }
 
 @media (min-width: 598px) {
 
-  #hamburger-menu {
+    #hamburger-menu {
       display: none;
-  }
+    }
 
-  nav ul {
+    nav ul {
       display: block;
-  }
+    }
 }
 
 @media (min-width: 768px) {
 
-  .footer {
+    .footer {
       display: block;
       font-size: 12px;
       bottom: 0;
-  }
+    }
 }
 
 .card .form {
-  margin: 0 auto; /* Added */
-  float: none; /* Added */
-  margin-bottom: 10px; /* Added */
+    margin: 0 auto; /* Added */
+    float: none; /* Added */
+    margin-bottom: 10px; /* Added */
 }
 
 .submission {
-  animation: mymove 0.5s infinite;
+    animation: mymove 0.5s infinite;
 }
 
 @keyframes mymove {
-  from {
-      background-color: #535353;
-  }
-  to {
-      background-color: green;
-  }
+    from {
+    background-color: #535353;
+    }
+    to {
+    background-color: green;
+    }
 }
 
 #about {
-  margin: 20px;
+    margin: 20px;
 }
 
 .jumbotron {
-  height: 22.5rem;
+    height: 22.5rem;
 }
 
+.column1 {
+    float: left;
+    width: 50%;
+    padding: 5px;
+}
 
-/* .container {
-  padding-top: 4rem;
+.column2 {
+    float: left;
+    width: 50%;
+    padding: 5px;
+}
+
+/* .column3 {
+    float: left;
+    width: 20%;
+    padding: 5px;
 } */
+
+  /* Clear floats after image containers */
+.row::after {
+    content: "";
+    clear: both;
+    display: table;
+}

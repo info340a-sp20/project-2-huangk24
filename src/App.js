@@ -4,27 +4,8 @@ import {BrowserRouter as HashRouter, Route, Switch, Link, Redirect} from 'react-
 import {HomePage} from "./HomePage";
 import {AboutPage} from "./AboutPage";
 import {PeoplePage} from "./PeoplePage";
-import * as d3 from 'd3';
 
 class App extends Component {
-  // dataLogic() {
-  //   let laptimes = [];
-  //   let trackdetails = [];
-  //   d3.csv("data/laptimes.csv")
-  //     .then(function(data) {
-  //       laptimes.push(data);
-  //       d3.csv("data/trackdata.csv")
-  //         .then(function(data2) {
-  //           trackdetails.push(data2);
-  //       });
-  //   });
-  //   let data = {};
-  //   data.laptimes = laptimes;
-  //   data.trackdetails = trackdetails;
-  //   console.log(data);
-  //   return data;
-  // }
-
   render() {
     return (
       <div className="body">
@@ -36,10 +17,7 @@ class App extends Component {
             <Route exact path="/">
                 <Redirect to="/home" />
             </Route>
-            <Route path="/home">
-              {/* <HomePage data={() => this.dataLogic}></HomePage> */}
-              <HomePage></HomePage>
-            </Route>
+            <Route path="/home" component={HomePage} />
             <Route path="/about" component={AboutPage} />
             <Route path="/people" component={PeoplePage}/>
           </Switch>

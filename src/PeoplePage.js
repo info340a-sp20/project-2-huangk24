@@ -1,27 +1,33 @@
 import React, { Component } from 'react';
 import 'bootstrap/dist/css/bootstrap.css';
-import { Card, CardText, CardBody, CardImg,
-    CardTitle, Button } from 'reactstrap';
 import * as d3 from 'd3';
-import {BrowserRouter as HashRouter, Route, Switch, Link, Redirect} from 'react-router-dom';
 
 export class PeoplePage extends Component {
+    constructor(props) {
+        super(props);
+        this.state = {
+            drivers: []
+        }
+    }
+
+    componentDidMount() {
+        let currentComponent = this;
+        d3.csv("data/drivers.csv")
+        .then(function(data) {
+            currentComponent.setState({drivers: data});
+        });
+    }
 
     render() {
-        // let drivers = d3.csv("data/drivers.csv");
-        // console.log(drivers.length);
-
-
-        // let jsxdrivers = drivers.map((person) => {
-        //     return <Person person={person}></Person>;
-        // })
-
-        // console.log(jsxdrivers);
+        let alldrivers = this.state.drivers.map((person) => {
+            return <Person key={person.name} person={person}></Person>;
+        });
 
         return(
             <div className="container">
-                {/* {jsxdrivers} */}
-                <Person></Person>
+                <div className="row-full" id="content">
+                    {alldrivers}
+                </div>
             </div>
         );
     }
@@ -30,29 +36,36 @@ export class PeoplePage extends Component {
 class Person extends Component {
     render() {
         return(
-            <div className="col-md-6 col-xl-4 d-flex">
-            <div className="card mb-4"><Card>
-              <div className="card-body"><CardBody>
+        //   <div className="col-md-6 col-xl-4 d-flex">
+        <div className="col-xl-12 d-flex">
+            <div className="card mb-12">
+              <div className="card-body">
                 <div className="row">
                   <div className="col-sm-auto w-100">
-                    <CardImg className="pb-3" src="./img/big-cota.jpg" alt="Circuit of the Americas" />
-                      <div className="col-sm">
-                        <CardTitle className="card-title">Some card idk</CardTitle>
-                          <button type="button" className="collapsible">Lap times</button>
-                          <div className="card-text" id="expand-list">
-                            {/* <CardText> */}
-                            <div className="card-text" id="expand-list">
-                              <ul className="hide-list row text-center" id="cota">
-                              </ul>
-                            {/* </CardText> */}
-                            </div>
-                            <a className="btn btn-dark float-right mt-3" href="https://en.wikipedia.org/wiki/Circuit_of_the_Americas" aria-label="Learn more about the track">Learn more</a>
-                          </div>
-                      </div>
+                    {/* <div className="col-sm"> */}
+                    <div className="column1">
+                    <img className="p-3" src={"img/"+this.props.person.facepic} alt={this.props.person.name}></img>
+                        <h2 className="card-title">{this.props.person.name}</h2>
+                        <div className="card-text">
+                            <p>A little dinkboi who thinks hes cool.</p>
+                        </div>
+                    </div>
+                    {/* <div className="col-sm"> */}
+                    <div className="column2">
+                        <img className="p-3" src={"img/"+this.props.person.carpic} alt={this.props.person.name}></img>
+                        <h2 className="card-title">{this.props.person.car}</h2>
+                        <div className="card-text">
+                            <p>racecar!!!.</p>
+                        </div>
+                    </div>
+                    {/* <div className="column3">
+                        <h2 className="card-title">Info</h2>
+                        <p>racecar n info stuff.</p>
+                    </div> */}
                   </div>
                 </div>
-              </CardBody></div>
-            </Card></div>
+              </div>
+            </div>
           </div>
         );
     }
