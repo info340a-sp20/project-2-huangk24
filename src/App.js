@@ -37,6 +37,7 @@ class NavBar extends Component {
           <ul className="nav">
             <li><img src="img/icon.png" alt="site icon" id="logo" /></li>             
             <li><Link to="/home" className="nav-link">Track Times</Link></li>
+            <li><Link to="/people" className="nav-link">Drivers and Cars</Link></li>
             <li><Link to="/about" className="nav-link">About</Link></li>
           </ul>
       </nav>      
