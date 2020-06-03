@@ -28,7 +28,7 @@ export class RenderCard extends Component {
   render() {
     let laptimes = [];
     this.props.times.forEach((laptime) => {
-      let name = <Route><Link to='/people'>{laptime.name}</Link></Route>;
+      let name = <Link to='/people'>{laptime.name}</Link>;
       laptimes.push(<li className="w-100" key={laptime.name}>{name}: {laptime.laptime}</li>);
     });
 
