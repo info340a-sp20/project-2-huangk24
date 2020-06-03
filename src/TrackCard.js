@@ -21,7 +21,7 @@ export class RenderCard extends Component {
     if (this.state.display === "block") {
       this.setState({display: "none"});
     } else {
-      this.setState({display: "block"});
+      this.setState({display: "table-cell"});
     }
   }
 

@@ -44,7 +44,7 @@ class Person extends Component {
                   <div className="col-sm-auto w-100">
                     {/* <div className="col-sm"> */}
                     <div className="column1">
-                    <img className="p-3" src={"img/"+this.props.person.facepic} alt={this.props.person.name}></img>
+                        <img className="p-3 w-100" src={"img/"+this.props.person.facepic} alt={this.props.person.name}></img>
                         <h2 className="card-title">{this.props.person.name}</h2>
                         <div className="card-text">
                             <p>A little dinkboi who thinks hes cool.</p>
@@ -52,7 +52,7 @@ class Person extends Component {
                     </div>
                     {/* <div className="col-sm"> */}
                     <div className="column2">
-                        <img className="p-3" src={"img/"+this.props.person.carpic} alt={this.props.person.name}></img>
+                        <img className="p-3 w-100" src={"img/"+this.props.person.carpic} alt={this.props.person.name}></img>
                         <h2 className="card-title">{this.props.person.car}</h2>
                         <div className="card-text">
                             <p>racecar!!!.</p>
