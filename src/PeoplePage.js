@@ -37,7 +37,7 @@ class Person extends Component {
     render() {
         return(
         //   <div className="col-md-6 col-xl-4 d-flex">
-        <div className="col-xl-12 d-flex">
+        <div className="col-xl-7 d-flex">
             <div className="card mb-12">
               <div className="card-body">
                 <div className="row">

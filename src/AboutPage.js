@@ -26,7 +26,7 @@ export class AboutPage extends Component {
                   even exist. Something similar is <a href="https://fastestlaps.com/">this site</a>, which 
                   for a given car, shows the fastest outright laptimes at major racetracks and other metadata 
                   along with it. Here is an example with a
-                  <a href="https://fastestlaps.com/models/porsche-911-gt3-rs-4-0"> Porsche GT3. </a> 
+                  <a href="https://fastestlaps.com/models/porsche-911-gt3-rs-4-0"> Porsche GT3</a>. 
                   My site would be very close in concept, but instead of outright fastest times per CAR per 
                   track, My site would show fastest laptimes per INDIVIDUAL per car per track. That way, people 
                   can directly compare their cars' lap times with each other on the website. It would be very 
@@ -41,8 +41,8 @@ export class AboutPage extends Component {
                   professional racers to document their lap times progressions, as well as other metadata. The 
                   data that viewers will be looking at is mostly best lap times per track per car that a user 
                   drove. The racetracks I'll be using can be found 
-                  <a href="https://en.wikipedia.org/wiki/List_of_auto_racing_tracks_in_the_United_States#Road_courses"> here.</a>
-                  I'll likely end up web scraping the data off the wikipedia site.
+                  <a href="https://en.wikipedia.org/wiki/List_of_auto_racing_tracks_in_the_United_States#Road_courses"> here</a>
+                  . I'll likely end up web scraping the data off the wikipedia site.
                   The cars and lap times will be entered manually by the user.
               </p>
       
