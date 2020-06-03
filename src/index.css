@@ -188,7 +188,7 @@ nav ul, footer {
       font-size: 20px;  
     }
 
-    ul.nav {
+    ul.nav, #logo {
       display: none;
     }
 }

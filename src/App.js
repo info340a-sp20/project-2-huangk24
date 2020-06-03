@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import 'bootstrap/dist/css/bootstrap.css';
+import 'font-awesome/css/font-awesome.min.css';
 import {BrowserRouter as HashRouter, Route, Switch, Link, Redirect} from 'react-router-dom';
 import {HomePage} from "./HomePage";
 import {AboutPage} from "./AboutPage";
