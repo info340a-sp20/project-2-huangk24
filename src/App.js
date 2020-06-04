@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import 'bootstrap/dist/css/bootstrap.css';
 import 'font-awesome/css/font-awesome.min.css';
-import {BrowserRouter as HashRouter, Route, Switch, Link, Redirect} from 'react-router-dom';
+import {HashRouter, Route, Switch, Link, Redirect} from 'react-router-dom';
 import {HomePage} from "./HomePage";
 import {AboutPage} from "./AboutPage";
 import {PeoplePage} from "./PeoplePage";
@@ -36,10 +36,10 @@ class NavBar extends Component {
       <nav id="nav">
         <div id="hamburger-menu"><a href="#"><i className="fa fa-bars" aria-label="menu"></i></a></div>
           <ul className="nav">
-            <li><img src="img/icon.png" alt="site icon" id="logo" /></li>             
-            <li><Link to="/home" className="nav-link">Track Times</Link></li>
-            <li><Link to="/people" className="nav-link">Drivers and Cars</Link></li>
-            <li><Link to="/about" className="nav-link">About</Link></li>
+            <li><img src="img/icon.png" alt="site icon" id="logo" /></li>
+            <li><Link to="/home" id="linkelems">Track Times</Link></li>
+            <li><Link to="/people" id="linkelems">Drivers and Cars</Link></li>
+            <li><Link to="/about" id="linkelems">About</Link></li>
           </ul>
       </nav>      
     )

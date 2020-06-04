@@ -18,7 +18,7 @@ export class RenderCard extends Component {
       this.setState({active: "collapsible active"});
     }
 
-    if (this.state.display === "block") {
+    if (this.state.display === "table-cell") {
       this.setState({display: "none"});
     } else {
       this.setState({display: "table-cell"});
