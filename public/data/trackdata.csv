@@ -1,7 +1,16 @@
 ﻿name,difficulty,length,location,propername,image,wiki
-nurburgring,10,16,germany,Nurburgring,img/big-nurb.jpg,https://en.wikipedia.org/wiki/N%C3%BCrburgring
+nurburgring,10,3.2,germany,Nurburgring,img/big-nurb.jpg,https://en.wikipedia.org/wiki/N%C3%BCrburgring
 laguna,7,2.2,us,Weathertech Laguna Seca,img/big-laguna.jpg,https://en.wikipedia.org/wiki/WeatherTech_Raceway_Laguna_Seca
 cota,6,3.4,us,Circuit of the Americas,img/big-cota.jpg,https://en.wikipedia.org/wiki/Circuit_of_the_Americas
 panorama,8,3.9,australia,Mount Panorama Circuit,img/big-mtp.jpg,https://en.wikipedia.org/wiki/Mount_Panorama_Circuit
 tskuba,5,1.3,japan,Tsukuba Circuit,img/big-tsu.jpg,https://en.wikipedia.org/wiki/Tsukuba_Circuit
 atlanta,6.5,2.5,us,Road Atlanta,img/big-rdatl.jpeg,https://en.wikipedia.org/wiki/Road_Atlanta
+siverstone,4,3.7,england,Siverstone Circuit,img/big-siverstone.jpg,https://en.wikipedia.org/wiki/Silverstone_Circuit
+suzuka,3,3.6,japan,Suzuka International Racing Course,img/big-suzuka.jpg,https://en.wikipedia.org/wiki/Suzuka_International_Racing_Course
+lemans,9,8.5,france,Circuit de la Sarthe,img/big-lemans.jpeg,https://en.wikipedia.org/wiki/Circuit_de_la_Sarthe
+francorchamps,4.5,4.4,belgium,Circuit de Spa-Francorchamps,img/big-francorchamps.jpg,https://en.wikipedia.org/wiki/Circuit_de_Spa-Francorchamps
+interlagos,6,2.7,brazil,Autódromo José Carlos Pace,img/big-interlagos.jpg,https://en.wikipedia.org/wiki/Aut%C3%B3dromo_Jos%C3%A9_Carlos_Pace
+monza,2,3.6,italy,Autodromo Nazionale di Monza,img/big-monza.jpg,https://en.wikipedia.org/wiki/Autodromo_Nazionale_di_Monza
+daytona,2.5,2.5,us,Daytona International Speedway,img/big-daytona.jpg,https://en.wikipedia.org/wiki/Daytona_International_Speedway
+indianapolis,3,2.4,us,Indianapolis Motor Speedway,img/big-indianapolis.jpg,https://en.wikipedia.org/wiki/Indianapolis_Motor_Speedway
+fuji,5,2.8,japan,Fuji Speedway,img/big-fuji.jpg,https://en.wikipedia.org/wiki/Fuji_Speedway

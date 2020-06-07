@@ -9,8 +9,8 @@ class SortOption extends Component {
       <>
         <label className="change-views" htmlFor="sort">Sort tracks by: </label>
         <select id="sort" onChange={(event) => this.props.changefunc(event.target.value)}>
-          <option value="length">Track Length</option>
-          <option value="difficulty">Difficulty</option>
+          <option value="length">Track Length (Long to Short)</option>
+          <option value="difficulty">Difficulty (Hard to Easy)</option>
         </select>
       </>
     )
@@ -28,6 +28,11 @@ class FilterOption extends Component {
             <option value="japan">Japan</option>
             <option value="australia">Australia</option>
             <option value="germany">Germany</option>
+            <option value="england">England</option>
+            <option value="france">France</option>
+            <option value="belgium">Belgium</option>
+            <option value="brazil">Brazil</option>
+            <option value="italy">Italy</option>
           </select>
       </>
     )
