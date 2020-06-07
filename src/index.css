@@ -99,7 +99,7 @@ nav a:hover, nav a:focus, nav a:active {
     /* border-bottom: .6rem solid #101010; */
 }
 
-img:not(#logo) {
+img:not(#logo):not(.firebaseui-idp-icon) {
     object-fit: cover;
     width: 18rem;
     height: 18rem;
@@ -277,4 +277,8 @@ div.d-flex {
 
 #linkelems {
     padding-top: 15px;
+}
+
+.firebaseui-title {
+    font-weight: 100;
 }
