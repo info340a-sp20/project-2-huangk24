@@ -44,9 +44,9 @@ class App extends Component {
     this.authUnSubFunction();
   }
 
-  handleSignOut = () => {
-    firebase.auth().signOut()
-  }
+  // handleSignOut = () => {
+  //   firebase.auth().signOut()
+  // }
 
   render() {
     let content = null;
@@ -57,14 +57,14 @@ class App extends Component {
     } 
     else { //signed in
       content = (
-        <div>
-          <div className="alert alert-success">
+        <>
+          {/* <div className="alert alert-success">
             <h3>Logged in as {this.state.user.displayName}
               <button className="btn btn-warning float-right" onClick={this.handleSignOut}>
                 Sign Out
               </button>
             </h3>
-          </div>
+          </div> */}
           <div className="body">
           <HashRouter basename={process.env.PUBLIC_URL+'/'}>
             <NavBar />
@@ -82,7 +82,7 @@ class App extends Component {
             <Footer/>
           </HashRouter>
           </div>
-        </div>
+        </>
       )
     }
 
@@ -117,6 +117,11 @@ class App extends Component {
 }
 
 class NavBar extends Component {
+
+  handleSignOut = () => {
+    firebase.auth().signOut()
+  }
+
   render() {
     return (
       <nav id="nav">
@@ -126,6 +131,9 @@ class NavBar extends Component {
             <li><Link to="/home" id="linkelems">Track Times</Link></li>
             <li><Link to="/people" id="linkelems">Drivers and Cars</Link></li>
             <li><Link to="/about" id="linkelems">About</Link></li>
+            <button className="alert alert-danger btn btn-warning btn-sm float-right" onClick={this.handleSignOut}>
+                Sign Out
+            </button>
           </ul>
       </nav>      
     )

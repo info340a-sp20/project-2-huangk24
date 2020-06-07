@@ -91,6 +91,7 @@ li {
 
 nav a {
     color: #f1f1f1;
+    margin-top: 2rem;
 }
 
 nav a:hover, nav a:focus, nav a:active {
@@ -238,6 +239,7 @@ nav ul, footer {
 
 .jumbotron {
     height: 22.5rem;
+    margin-top: 3rem;
 }
 
 .column1 {
@@ -281,4 +283,10 @@ div.d-flex {
 
 .firebaseui-title {
     font-weight: 100;
+}
+
+button.alert {
+    position: fixed;
+    margin-right: 1rem;
+    margin-top: .3rem;
 }
