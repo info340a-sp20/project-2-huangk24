@@ -289,4 +289,5 @@ button.alert {
     position: fixed;
     margin-right: 1rem;
     margin-top: .3rem;
+    right: 0;
 }

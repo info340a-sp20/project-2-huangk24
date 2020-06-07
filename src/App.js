@@ -87,14 +87,14 @@ class App extends Component {
     }
 
     return (
-      <div className="container">
+      <>
         {/* Only included if first clause is true */}
         {this.state.errorMessage &&
           <p className="alert alert-danger">{this.state.errorMessage}</p>
         }
         {/* Show content based on user login state */}
         {content}
-      </div>
+      </>
       // <div className="body">
       // <HashRouter basename={process.env.PUBLIC_URL+'/'}>
       //   <NavBar />
