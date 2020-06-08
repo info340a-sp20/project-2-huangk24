@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import 'bootstrap/dist/css/bootstrap.css';
+import firebase from 'firebase/app';
 import {BrowserRouter as Route, Link} from 'react-router-dom';
 
 export class RenderCard extends Component {
@@ -7,8 +8,41 @@ export class RenderCard extends Component {
     super(props);
     this.state = {
       display: "none",
-      active: "collapsible"
+      active: "collapsible",
+      fav: false
     }
+  }
+
+  componentDidMount() {
+    let track = firebase.database().ref(this.props.track.name);
+    track.on("value", (snapshot) => {
+      if (snapshot.val()) {
+        this.setState({fav: true});
+        // console.log(this.props.track.name);
+      }
+      // if (this.props.track.name == "nurburgring") {
+      //   console.log(snapshot);
+      //   console.log(snapshot.val());
+      //   console.log(snapshot.val().fav);
+      // }
+    });
+  }
+
+  handleFav = (event) => {
+    this.setState({fav: true});
+    let track = firebase.database().ref(this.props.track.name);
+    track.set({fav: true})
+  }
+
+  handleUnfav = (event) => {
+    this.setState({fav: false});
+    let track = firebase.database().ref(this.props.track.name);
+    track.set({fav: false})
+  }
+
+  componentWillUnmount() {
+    let track = firebase.database().ref(this.props.track.name);
+    track.off();
   }
 
   rendertimes = () => {
@@ -32,6 +66,13 @@ export class RenderCard extends Component {
       laptimes.push(<li className="w-100" key={laptime.name}>{name}: {laptime.laptime}</li>);
     });
 
+    let fav = null;
+    if (this.state.fav) {
+      fav = <i className="fa fa-star float-left mt-4" onClick={this.handleUnfav}></i>;
+    } else {
+      fav = <i className="fa fa-star-o float-left mt-4" onClick={this.handleFav}></i>;
+    }
+
     return(
       <div className="col-md-6 col-xl-4 d-flex">
         <div className="card mb-4">
@@ -47,6 +88,7 @@ export class RenderCard extends Component {
                       {laptimes}
                     </ul>
                   </div>
+                  {fav}
                   <a className="btn btn-dark float-right mt-3" href={this.props.track.wiki} aria-label="Learn more about the track">Learn more</a>
                 </div>
               </div>
