@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import 'bootstrap/dist/css/bootstrap.css';
 import firebase from 'firebase/app';
-import {BrowserRouter as Route, Link} from 'react-router-dom';
+import {BrowserRouter as Link} from 'react-router-dom';
 
 export class RenderCard extends Component {
   constructor(props) {
@@ -14,29 +14,23 @@ export class RenderCard extends Component {
   }
 
   componentDidMount() {
-    let track = firebase.database().ref(this.props.track.name);
+    let track = firebase.database().ref(this.props.fbuserkey + "/" + this.props.track.name);
     track.on("value", (snapshot) => {
       if (snapshot.val()) {
         this.setState({fav: true});
-        // console.log(this.props.track.name);
       }
-      // if (this.props.track.name == "nurburgring") {
-      //   console.log(snapshot);
-      //   console.log(snapshot.val());
-      //   console.log(snapshot.val().fav);
-      // }
     });
   }
 
   handleFav = (event) => {
     this.setState({fav: true});
-    let track = firebase.database().ref(this.props.track.name);
+    let track = firebase.database().ref(this.props.fbuserkey + "/" + this.props.track.name);
     track.set({fav: true})
   }
 
   handleUnfav = (event) => {
     this.setState({fav: false});
-    let track = firebase.database().ref(this.props.track.name);
+    let track = firebase.database().ref(this.props.fbuserkey + "/" + this.props.track.name);
     track.set({fav: false})
   }
 

@@ -74,12 +74,10 @@ export class HomePage extends Component {
     let cards = [];
     let filteredtracks;
     if (this.state.filter !== "all") {
-      // console.log("filter not all");
       filteredtracks = this.state.trackdetails.filter((track) => {
         return track.location === this.state.filter;
       });
     } else {
-      // console.log("filter all");
       filteredtracks = this.state.trackdetails;
     }
 
@@ -98,12 +96,13 @@ export class HomePage extends Component {
           timesarray.push(this.state.laptimes[j]);
         }
       }
-      cards.push(<RenderCard key={filteredtracks[i].name} track={filteredtracks[i]} times={timesarray}></RenderCard>);
+      cards.push(<RenderCard fbuserkey={this.props.fbuserkey} key={filteredtracks[i].name} track={filteredtracks[i]} times={timesarray}></RenderCard>);
     }
     return cards;
   }
 
   render() {
+    console.log(this.props.fbuserkey);
     return (
       <>
         <SortOption changefunc={this.changesort}/>

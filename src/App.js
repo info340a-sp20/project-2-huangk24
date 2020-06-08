@@ -67,7 +67,9 @@ class App extends Component {
                 <Route exact path="/">
                     <Redirect to="/home" />
                 </Route>
-                <Route path="/home" component={HomePage} />
+                <Route path='/home' render={(routerProps) => (
+                    <HomePage {...routerProps} fbuserkey={(this.state.user.email).replace(/[^a-zA-Z0-9]/g, "")}/>
+                )}/>
                 <Route path="/about" component={AboutPage} />
                 <Route path="/people" component={PeoplePage}/>
               </Switch>
@@ -88,23 +90,6 @@ class App extends Component {
         {/* Show content based on user login state */}
         {content}
       </>
-      // <div className="body">
-      // <HashRouter basename={process.env.PUBLIC_URL+'/'}>
-      //   <NavBar />
-      //   <Header />
-      //   <main>
-      //     <Switch>
-      //       <Route exact path="/">
-      //           <Redirect to="/home" />
-      //       </Route>
-      //       <Route path="/home" component={HomePage} />
-      //       <Route path="/about" component={AboutPage} />
-      //       <Route path="/people" component={PeoplePage}/>
-      //     </Switch>
-      //   </main>
-      //   <Footer/>
-      // </HashRouter>
-      // </div>
     )
   }
 }
