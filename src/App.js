@@ -58,13 +58,6 @@ class App extends Component {
     else { //signed in
       content = (
         <>
-          <div className="alert alert-success">
-            <h3>Logged in as {this.state.user.displayName}
-              <button className="btn btn-warning float-right" onClick={this.handleSignOut}>
-                Sign Out
-              </button>
-            </h3>
-          </div>
           <div className="body">
           <HashRouter basename={process.env.PUBLIC_URL+'/'}>
             <NavBar />
