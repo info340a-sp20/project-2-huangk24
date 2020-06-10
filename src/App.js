@@ -111,10 +111,10 @@ class NavBar extends Component {
   }
 
   renderMenu = () => {
-    if (this.state.display === "block") {
+    if (this.state.display === "grid") {
       this.setState({display: "none"});
     } else {
-      this.setState({display: "block"});
+      this.setState({display: "grid"});
     }
   }
 
@@ -128,9 +128,9 @@ class NavBar extends Component {
               Sign Out
             </button>
           <div id="myLinks" style={{display: this.state.display}}>
-            <li><Link to="/home" id="burgerList">Track Times</Link></li>
-            <li><Link to="/people" id="burgerList">Drivers and Cars</Link></li>
-            <li><Link to="/about" id="burgerList">About</Link></li>
+            <li><Link to="/home" id="burgerList" onClick={this.renderMenu}>Track Times</Link></li>
+            <li><Link to="/people" id="burgerList" onClick={this.renderMenu}>Drivers and Cars</Link></li>
+            <li><Link to="/about" id="burgerList" onClick={this.renderMenu}>About</Link></li>
           </div>
         </div>
         {/* <div id="hamburger-menu"><a href="#"><i className="fa fa-bars" aria-label="menu"></i></a></div> */}
