@@ -183,6 +183,27 @@ nav ul, footer {
     margin-top: 3rem;
 }
 
+.topnav {
+    overflow: hidden;
+    background-color: #d33434;
+    position: relative;
+  }
+  
+.topnav #myLinks {
+    display: none;
+}
+
+button.alert {
+    position: fixed;
+    margin-right: 1rem;
+    margin-top: .1rem;
+    right: 0;
+}
+
+#buttonTwo {
+    margin-top: .3rem;
+}
+
 @media (max-width: 598px) {
 
     .card-text li{
@@ -210,6 +231,19 @@ nav ul, footer {
     .jumbotron {
         height: 17rem;
         margin-top: 1.4rem;
+    }
+
+    nav li {
+        font-size: 10px;
+    }
+
+    button.alert {
+        padding: 3px 6px;
+        font-size: 8px;
+    }
+
+    nav a {
+        margin-top: .2rem;
     }
 }
 
@@ -291,11 +325,4 @@ div.d-flex {
 
 .firebaseui-title {
     font-weight: 100;
-}
-
-button.alert {
-    position: fixed;
-    margin-right: 1rem;
-    margin-top: .3rem;
-    right: 0;
 }

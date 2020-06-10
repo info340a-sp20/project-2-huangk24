@@ -13,7 +13,10 @@ class App extends Component {
   constructor(props){
     super(props)
 
-    this.state = {user: null}
+    this.state = {
+      user: null,
+      display: 'none'
+    }
   }
 
   //Configure FirebaseUI (inside the component, public class field)
@@ -95,24 +98,51 @@ class App extends Component {
 }
 
 class NavBar extends Component {
+  constructor(props){
+    super(props)
+
+    this.state = {
+      display: 'none'
+    }
+  }
 
   handleSignOut = () => {
     firebase.auth().signOut()
   }
 
+  renderMenu = () => {
+    if (this.state.display === "block") {
+      this.setState({display: "none"});
+    } else {
+      this.setState({display: "block"});
+    }
+  }
+
   render() {
+
     return (
       <nav id="nav">
-        <div id="hamburger-menu"><a href="#"><i className="fa fa-bars" aria-label="menu"></i></a></div>
-          <ul className="nav">
-            <li><img src="img/icon.png" alt="site icon" id="logo" /></li>
-            <li><Link to="/home" id="linkelems">Track Times</Link></li>
-            <li><Link to="/people" id="linkelems">Drivers and Cars</Link></li>
-            <li><Link to="/about" id="linkelems">About</Link></li>
-            <button className="alert alert-danger btn btn-warning btn-sm float-right" onClick={this.handleSignOut}>
-                Sign Out
+        <div class="topnav" id="hamburger-menu">
+          <a href="#"><i className="fa fa-bars" onClick={this.renderMenu} aria-label="menu"></i></a>
+          <button className="alert alert-danger btn btn-warning btn-sm float-right" id="burgerList" onClick={this.handleSignOut}>
+              Sign Out
             </button>
-          </ul>
+          <div id="myLinks" style={{display: this.state.display}}>
+            <li><Link to="/home" id="burgerList">Track Times</Link></li>
+            <li><Link to="/people" id="burgerList">Drivers and Cars</Link></li>
+            <li><Link to="/about" id="burgerList">About</Link></li>
+          </div>
+        </div>
+        {/* <div id="hamburger-menu"><a href="#"><i className="fa fa-bars" aria-label="menu"></i></a></div> */}
+        <ul className="nav">
+          <li><img src="img/icon.png" alt="site icon" id="logo" /></li>
+          <li><Link to="/home" id="linkelems">Track Times</Link></li>
+          <li><Link to="/people" id="linkelems">Drivers and Cars</Link></li>
+          <li><Link to="/about" id="linkelems">About</Link></li>
+          <button className="alert alert-danger btn btn-warning btn-sm float-right" id="buttonTwo" onClick={this.handleSignOut}>
+            Sign Out
+          </button>
+        </ul>
       </nav>      
     )
   }
