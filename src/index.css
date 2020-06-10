@@ -250,6 +250,10 @@ button.alert {
     nav a {
         margin-top: .2rem;
     }
+
+    .footer {
+        font-size: 10px;
+      }
 }
 
 @media (min-width: 598px) {
@@ -267,7 +271,6 @@ button.alert {
 
     .footer {
       display: block;
-      font-size: 5px;
       bottom: 0;
       margin-left: 1rem;
     }
