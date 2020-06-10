@@ -120,6 +120,11 @@ nav ul img {
     height: 60px;
 }
 
+section p {
+    margin-left: 1.5rem;
+    margin-right: 1.5rem;
+}
+
 .card-title {
     font-family: 'Orbitron', sans-serif;
     font-size: 18px;
@@ -262,8 +267,9 @@ button.alert {
 
     .footer {
       display: block;
-      font-size: 12px;
+      font-size: 5px;
       bottom: 0;
+      margin-left: 1rem;
     }
 }
 
