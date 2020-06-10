@@ -16,7 +16,7 @@ export class RenderCard extends Component {
   componentDidMount() {
     let track = firebase.database().ref(this.props.fbuserkey + "/" + this.props.track.name);
     track.on("value", (snapshot) => {
-      if (snapshot.val()) {
+      if (snapshot.val() && snapshot.val().fav) {
         this.setState({fav: true});
       }
     });
